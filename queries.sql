@@ -17,9 +17,9 @@ GROUP BY "Gender";
 
 -- Total sales by City and Gender (Naypyitaw + Female) 
 SELECT 
-    City,
-    Gender,
+    "City",
+    "Gender",
     SUM(Sales) AS total_sales
 FROM sales
-WHERE City = 'Naypyitaw' AND Gender = 'Female'
-GROUP BY City, Gender;
+WHERE "City" = 'Naypyitaw' AND "Gender" = 'Female'
+GROUP BY "City", "Gender";
