@@ -15,7 +15,11 @@ SELECT "Gender", SUM(Sales) as total_sales
 FROM sales
 GROUP BY "Gender";
 
--- Average spending by gender
-SELECT "Gender", AVG(Sales) as avg_spending
+-- Total sales by City and Gender (Naypyitaw + Female) 
+SELECT 
+    City,
+    Gender,
+    SUM(Sales) AS total_sales
 FROM sales
-GROUP BY "Gender";
+WHERE City = 'Naypyitaw' AND Gender = 'Female'
+GROUP BY City, Gender;
